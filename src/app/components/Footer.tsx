@@ -5,7 +5,7 @@ import Link from 'next/link'
 //Menu de navigation du footer
 const navLinks = [
     { name: 'Accueil', href: '#hero' },
-    { name: 'About', href: '#about' },
+    { name: 'À propos', href: '#about' },
     { name: 'Projets', href: '#projects' },
     { name: 'Contact', href: '#contact' },
 ]
