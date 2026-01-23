@@ -47,7 +47,7 @@ export default function Header() {
             }`}
         >
             <nav className="container mx-auto px-6 py-4">
-                <div className="flex items-center justify-center md:justify-end">
+                <div className="flex items-center justify-end">
                     <ul className="flex gap-4 md:gap-8">
                         {navItems.map((item) => (
                             <li key={item.name}>
@@ -59,7 +59,7 @@ export default function Header() {
                                             : 'text-gray-500 hover:text-cyan-500'
                                     }`}
                                 >
-                                    <span className="flex items-center gap-1">{item.icon} {item.name}</span>
+                                    <span className="flex items-center gap-1"><span>{item.icon}</span> <span className="hidden md:flex">{item.name}</span></span>
                                     {activeSection === item.href.replace('#', '') && (
                                         <motion.div
                                             layoutId="activeSection"

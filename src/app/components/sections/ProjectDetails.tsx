@@ -125,6 +125,11 @@ function ProjectCarousel({ project }: { project: typeof projectsDetails[0] }) {
         })
     }
 
+    const swipeConfidenceThreshold = 10000
+    const swipePower = (offset: number, velocity: number) => {
+        return Math.abs(offset) * velocity
+    }
+
     const paginate = (newDirection: number) => {
         setDirection(newDirection)
         setCurrentImageIndex((prevIndex) => {
@@ -146,7 +151,7 @@ function ProjectCarousel({ project }: { project: typeof projectsDetails[0] }) {
                     <div className="md:col-span-2 space-y-8">
                         <div>
                             <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">{project.title}</h2>
-                            {project.confidential && <span className="flex items-center gap-1 rounded-full bg-red-200 text-red-600 font-medium md:text-lg px-4 py-2 w-fit mb-4"><ShieldAlert className="size-5 md:size-6"/>Confidentatial! Limited infos.</span>}
+                            {project.confidential && <span className="flex items-center gap-1 rounded-full bg-red-200 text-red-600 font-medium text-xs md:text-sm px-4 py-1 w-fit mb-4"><ShieldAlert className="size-4 md:size-5"/>Confidentiel! Infos limitées.</span>}
                             <p className="text-base md:text-lg text-gray-400 leading-relaxed">
                                 {project.description}
                             </p>
@@ -187,7 +192,7 @@ function ProjectCarousel({ project }: { project: typeof projectsDetails[0] }) {
                                 href={project.liveUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-b from-slate-300 via-cyan-600 to-cyan-900 text-white rounded-lg hover:to-cyan-500 transition group"
+                                className="inline-flex items-center gap-2 px-3 py-1.5 text-sm md:text-base md:px-6 md:py-3 bg-gradient-to-b from-slate-300 via-cyan-600 to-cyan-900 text-white rounded-lg hover:to-cyan-500 transition group"
                                 >
                                 <ExternalLink size={18} />
                                 Voir le site
@@ -198,7 +203,7 @@ function ProjectCarousel({ project }: { project: typeof projectsDetails[0] }) {
                                     href={project.githubUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center text-gray-200 gap-2 px-6 py-3 border border-gray-300 rounded-lg hover:bg-slate-800 transition"
+                                    className="inline-flex items-center text-gray-200 gap-2 px-3 py-1.5 text-sm md:text-base md:px-6 md:py-3 border border-gray-300 rounded-lg hover:bg-slate-800 transition"
                                 >
                                     <Github size={18} />
                                     Code source
@@ -222,6 +227,18 @@ function ProjectCarousel({ project }: { project: typeof projectsDetails[0] }) {
                                         x: { type: "spring", stiffness: 300, damping: 30 },
                                         opacity: { duration: 0.2 }
                                     }}
+                                    drag="x"
+                                    dragConstraints={{ left: 0, right: 0 }}
+                                    dragElastic={1}
+                                    onDragEnd={(e, { offset, velocity }) => {
+                                        const swipe = swipePower(offset.x, velocity.x)
+
+                                        if (swipe < -swipeConfidenceThreshold) {
+                                            paginate(1)
+                                        } else if (swipe > swipeConfidenceThreshold) {
+                                            paginate(-1)
+                                        }
+                                    }}
                                     className="absolute inset-0"
                                 >
                                     {/*<div
@@ -239,14 +256,14 @@ function ProjectCarousel({ project }: { project: typeof projectsDetails[0] }) {
                                 <>
                                     <button
                                         onClick={() => paginate(-1)}
-                                        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12  opacity-80 backdrop-blur-sm rounded-full shadow-lg hover:opacity-100 hover:bg-white transition flex items-center justify-center group z-10"
+                                        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 backdrop-blur-sm rounded-full shadow-lg hover:opacity-100 hover:bg-white transition flex items-center justify-center group z-10"
                                         aria-label="Image précédente"
                                     >
                                         <ChevronLeft className="group-hover:-translate-x-1 transition-transform" />
                                     </button>
                                     <button
                                         onClick={() => paginate(1)}
-                                        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 opacity-80 backdrop-blur-sm rounded-full shadow-lg hover:opacity-100 hover:bg-white transition flex items-center justify-center group z-10"
+                                        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/70 backdrop-blur-sm rounded-full shadow-lg hover:opacity-100 hover:bg-white transition flex items-center justify-center group z-10"
                                         aria-label="Image suivante"
                                     >
                                         <ChevronRight className="group-hover:translate-x-1 transition-transform" />
