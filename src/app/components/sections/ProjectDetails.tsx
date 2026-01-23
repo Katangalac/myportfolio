@@ -256,14 +256,14 @@ function ProjectCarousel({ project }: { project: typeof projectsDetails[0] }) {
                                 <>
                                     <button
                                         onClick={() => paginate(-1)}
-                                        className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 w-12 h-12 bg-white/30 backdrop-blur-sm rounded-full shadow-lg hover:bg-white/60 transition flex items-center justify-center group z-10"
+                                        className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-700 w-12 h-12 bg-white/10  rounded-full shadow-lg hover:bg-white/60 transition flex items-center justify-center group z-10"
                                         aria-label="Image précédente"
                                     >
                                         <ChevronLeft className="group-hover:-translate-x-1 transition-transform" />
                                     </button>
                                     <button
                                         onClick={() => paginate(1)}
-                                        className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 w-12 h-12 bg-white/30 backdrop-blur-sm rounded-full shadow-lg  hover:bg-white/60 transition flex items-center justify-center group z-10"
+                                        className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-700 w-12 h-12 bg-white/10  rounded-full shadow-lg  hover:bg-white/60 transition flex items-center justify-center group z-10"
                                         aria-label="Image suivante"
                                     >
                                         <ChevronRight className="group-hover:translate-x-1 transition-transform" />
