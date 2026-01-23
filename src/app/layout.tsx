@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
-import {Analytics} from "@vercel/analytics/dist/vue";
+import {Analytics} from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ['latin'] })
 
