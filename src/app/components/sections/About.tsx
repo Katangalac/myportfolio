@@ -245,9 +245,9 @@ function ExperienceContent() {
                         <p className="text-sm md:text-base text-gray-400 mb-4 text-justify">{exp.description}</p>
                         <div className="mb-3 flex items-center gap-1">
                             <label className="text-white text-sm md:text-base font-semibold">Outils :</label>
-                            <p className="text-sm md:text-base text-gray-400">{exp.tech}</p>
+                            <p className="text-sm md:text-base text-gray-300">{exp.tech}</p>
                         </div>
-                        <div className="border-l-4 border-blue-600 pl-4">
+                        <div className="border-l-4 border-cyan-500 pl-4">
                             <h4 className="text-sm md:text-base text-white font-semibold mb-2">Réalisations clés :</h4>
                             <ul className="space-y-1">
                                 {exp.achievements.map((achievement, j) => (

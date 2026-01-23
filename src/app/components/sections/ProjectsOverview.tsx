@@ -8,20 +8,12 @@ import Image from 'next/image'
 // Information sommaire de chaque projet
 const projects = [
     {
-        id: 4,
-        title: 'Application de suivi des restaurants',
-        category: 'Web App / Sociale',
-        imgSrc:"/Ufood/uf-home.webp",
-        description: 'Découverte, notation et organisation de visites de restaurants avec suivi des listes et activités d’autres utilisateurs.',
-        tags: ['Vue.js', 'TailwindCSS', 'HTML & CSS', 'Google Maps API']
-    },
-    {
-        id: 3,
-        title: "Application de partage d'images",
-        category: 'Web App / Sociale',
-        imgSrc:"/Uimages/all-imgs.webp",
-        description: 'Publier, liker et commenter des images pour favoriser l’interaction entre utilisateurs.',
-        tags: ['Next.js', 'TailwindCSS', 'Prisma', 'PostgreSQL', 'Vercel', 'CI/CD', 'Docker']
+        id: 1,
+        title: 'Application de suivi des projets et tâches',
+        imgSrc:"/projectFlow/dashboard.webp",
+        category: 'Web App / Productivité',
+        description: 'Création et suivi de tâches avec communication en temps réel entre les membres d’équipe.',
+        tags: ['React', 'TailwindCSS', 'PostgreSQL', 'Zustand', 'WebSocket', 'Redis']
     },
     {
         id: 2,
@@ -32,12 +24,20 @@ const projects = [
         tags: ['Blazor (ASP.NET Core)', 'Entity Framework Core', 'SQL', 'HTML & CSS', 'IIS', 'CI/CD']
     },
     {
-        id: 1,
-        title: 'Application de suivi des projets et tâches',
-        imgSrc:"/projectFlow/dashboard.webp",
-        category: 'Web App / Productivité',
-        description: 'Création et suivi de tâches avec communication en temps réel entre les membres d’équipe.',
-        tags: ['React', 'TailwindCSS', 'PostgreSQL', 'Zustand', 'WebSocket', 'Redis']
+        id: 3,
+        title: "Application de partage d'images",
+        category: 'Web App / Sociale',
+        imgSrc:"/Uimages/all-imgs.webp",
+        description: 'Publier, liker et commenter des images pour favoriser l’interaction entre utilisateurs.',
+        tags: ['Next.js', 'TailwindCSS', 'Prisma', 'PostgreSQL', 'Vercel', 'CI/CD', 'Docker']
+    },
+    {
+        id: 4,
+        title: 'Application de suivi des restaurants',
+        category: 'Web App / Sociale',
+        imgSrc:"/Ufood/uf-home.webp",
+        description: 'Découverte, notation et organisation de visites de restaurants avec suivi des listes et activités d’autres utilisateurs.',
+        tags: ['Vue.js', 'TailwindCSS', 'HTML & CSS', 'Google Maps API']
     },
 ];
 

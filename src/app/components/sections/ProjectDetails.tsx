@@ -2,52 +2,33 @@
 'use client'
 
 import { useState } from 'react'
-import { ChevronLeft, ChevronRight, ExternalLink, Github } from 'lucide-react'
+import { ChevronLeft, ChevronRight, ExternalLink, Github, ShieldAlert } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 // Informations détaillées de chaque projet
 const projectsDetails = [
     {
-        id: 4,
-        title: 'Application de suivi des restaurants',
-        description: "Le site permet aux utilisateurs de parcourir un catalogue de restaurants, les noter et créer des listes de favoris. Il permet également de suivre les visites d'autres utilisateurs et propose une carte interactive avec itinéraires.",
-        technologies: ['Vue.js', 'JavaScript', 'TailwindCSS', 'HTML & CSS', 'Google Maps API'],
-        skills: ['Consommation d\'API REST', 'UI/UX Design', 'Gestion sécurisée de sessions', 'Gestion d\'état avec des stores', 'Intégration API (Google Maps)'],
-        liveUrl: 'https://example.com',
-        githubUrl: 'https://github.com/username/project',
-        images: [
-            {src:'/Ufood/res-list.webp', alt:'restaurants list'},
-            {src:'/Ufood/res-map.webp', alt:'restaurants map'},
-            {src:'/Ufood/res-det.webp', alt:'restaurant detail'},
-            {src:'/Ufood/res-direct.webp', alt:'restaurant direction'},
-            {src:'/Ufood/user-prof.webp', alt:'user profile'},
-            {src:'/Ufood/rate-visit.webp', alt:'visit rating'},
-        ],
-        deploy:false,
-        code:true,
-    },
-    {
-        id: 3,
-        title: "Application de partage d'images",
-        description:  "Plateforme de partage d’images permettant aux utilisateurs de publier, liker et commenter des contenus, avec mentions d’utilisateurs et hashtags.\n" +
-            "L’application favorise l’interaction et l’engagement autour des images.",
-        technologies: ['Next.js', 'TypeScript', 'Clerk', 'tRPC', 'TailwindCSS', 'Prisma', 'PostgreSQL', 'Uploadcare', 'CI/CD', 'Docker', 'Vercel Analytics', 'Sentry'],
-        skills: ['Authentification OAuth (Clerk)', 'Utilisation d\'ORM', 'Optimisation des performances web', 'Conteneurisation', 'Monitoring d\'application', 'Pipeline CI/CD avec GitHub Actions','Responsive design', 'Déploiement sur Vercel'],
-        liveUrl: 'https://example.com',
-        githubUrl: 'https://github.com/username/project',
-        images: [
-            {src:'/Uimages/upload-page.webp', alt:'upload-page'},
-            {src:'/Uimages/img-upload.webp', alt:'image-uploading'},
-            {src:'/Uimages/user-profile.webp', alt:'uer profile'},
-            {src:'/Uimages/img-det.webp', alt:'image details'},
-            {src:'/Uimages/comment-sec.webp', alt:'comment section'},
-            {src:'/Uimages/img-form.webp', alt:'image form'},
-        ],
-        deploy:false,
-        code:true,
-    },
-    {
         id: 1,
+        title: 'Application de suivi des projets et tâches',
+        description: "Application de gestion des projets et tâches permettant de suivre la progression, gérer les priorités et communiquer en temps réel avec les coéquipiers. Le backend a été conçu avec une architecture en couches afin de garantir un code clair, maintenable et facilement extensible. ",
+        technologies: ['React','Typescript', 'Node.js', 'Express', 'TailwindCSS', 'Prisma', 'PostgreSQL', 'Redis', 'WebSocket'],
+        skills: ['Temps réel avec WebSocket', 'Zustand', 'Authentification avec JWT', 'Déploiement sur Render'],
+        liveUrl: 'https://example.com',
+        githubUrl: 'https://github.com/katangalac/projectManager',
+        images: [
+            {src:'/projectFlow/project-page.webp', alt:'project-page'},
+            {src:'/projectFlow/project-detail.webp', alt:'project-detail'},
+            {src:'/projectFlow/task-kanban.webp', alt:'task-kanban'},
+            {src:'/projectFlow/task-detail.webp', alt:'task-detail'},
+            {src:'/projectFlow/conv.webp', alt:'conversation'},
+            {src:'/projectFlow/scheduler.webp', alt:'scheduler'},
+        ],
+        confidential:false,
+        deploy:true,
+        code:true,
+    },
+    {
+        id: 2,
         title: 'Plateforme de collecte de données',
         description: "Application multithreadée et temps réel dédiée à la gestion de capteurs, incluant la collecte, " +
             "le filtrage, le stockage et la diffusion des données, avec carte interactive.\n" +
@@ -66,26 +47,49 @@ const projectsDetails = [
             {src:'/PCMC/Setting-2.webp', alt:'app-setting-2'},
             {src:'/PCMC/map.webp', alt:'map'},
         ],
+        confidential:true,
         deploy:false,
         code:false,
     },
     {
-        id: 2,
-        title: 'Application de suivi des projets et tâches',
-        description: "Application de gestion des projets et tâches permettant de suivre la progression, gérer les priorités et communiquer en temps réel avec les coéquipiers. Le backend a été conçu avec une architecture en couches afin de garantir un code clair, maintenable et facilement extensible. ",
-        technologies: ['React','Typescript', 'Node.js', 'Express', 'TailwindCSS', 'Prisma', 'PostgreSQL', 'Redis', 'WebSocket'],
-        skills: ['Temps réel avec WebSocket', 'Zustand', 'Authentification avec JWT', 'Déploiement sur Render'],
+        id: 3,
+        title: "Application de partage d'images",
+        description:  "Plateforme de partage d’images permettant aux utilisateurs de publier, liker et commenter des contenus, avec mentions d’utilisateurs et hashtags.\n" +
+            "L’application favorise l’interaction et l’engagement autour des images.",
+        technologies: ['Next.js', 'TypeScript', 'Clerk', 'tRPC', 'TailwindCSS', 'Prisma', 'PostgreSQL', 'Uploadcare', 'CI/CD', 'Docker', 'Vercel Analytics', 'Sentry'],
+        skills: ['Authentification OAuth (Clerk)', 'Utilisation d\'ORM', 'Optimisation des performances web', 'Conteneurisation', 'Monitoring d\'application', 'Pipeline CI/CD avec GitHub Actions','Responsive design', 'Déploiement sur Vercel'],
         liveUrl: 'https://example.com',
-        githubUrl: 'https://github.com/katangalac/projectManager',
+        githubUrl: 'https://github.com/Katangalac/Images-Publication-App',
         images: [
-            {src:'/projectFlow/project-page.webp', alt:'project-page'},
-            {src:'/projectFlow/project-detail.webp', alt:'project-detail'},
-            {src:'/projectFlow/task-kanban.webp', alt:'task-kanban'},
-            {src:'/projectFlow/task-detail.webp', alt:'task-detail'},
-            {src:'/projectFlow/conv.webp', alt:'conversation'},
-            {src:'/projectFlow/scheduler.webp', alt:'scheduler'},
+            {src:'/Uimages/upload-page.webp', alt:'upload-page'},
+            {src:'/Uimages/img-upload.webp', alt:'image-uploading'},
+            {src:'/Uimages/user-profile.webp', alt:'uer profile'},
+            {src:'/Uimages/img-det.webp', alt:'image details'},
+            {src:'/Uimages/comment-sec.webp', alt:'comment section'},
+            {src:'/Uimages/img-form.webp', alt:'image form'},
         ],
-        deploy:true,
+        confidential:false,
+        deploy:false,
+        code:true,
+    },
+    {
+        id: 4,
+        title: 'Application de suivi des restaurants',
+        description: "Le site permet aux utilisateurs de parcourir un catalogue de restaurants, les noter et créer des listes de favoris. Il permet également de suivre les visites d'autres utilisateurs et propose une carte interactive avec itinéraires.",
+        technologies: ['Vue.js', 'JavaScript', 'TailwindCSS', 'HTML & CSS', 'Google Maps API'],
+        skills: ['Consommation d\'API REST', 'UI/UX Design', 'Gestion sécurisée de sessions', 'Gestion d\'état avec des stores', 'Intégration API (Google Maps)'],
+        liveUrl: 'https://example.com',
+        githubUrl: 'https://github.com/Katangalac/Restaurant-Tracking-App',
+        images: [
+            {src:'/Ufood/res-list.webp', alt:'restaurants list'},
+            {src:'/Ufood/res-map.webp', alt:'restaurants map'},
+            {src:'/Ufood/res-det.webp', alt:'restaurant detail'},
+            {src:'/Ufood/res-direct.webp', alt:'restaurant direction'},
+            {src:'/Ufood/user-prof.webp', alt:'user profile'},
+            {src:'/Ufood/rate-visit.webp', alt:'visit rating'},
+        ],
+        confidential:false,
+        deploy:false,
         code:true,
     },
 ]
@@ -142,6 +146,7 @@ function ProjectCarousel({ project }: { project: typeof projectsDetails[0] }) {
                     <div className="md:col-span-2 space-y-8">
                         <div>
                             <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">{project.title}</h2>
+                            {project.confidential && <span className="flex items-center gap-1 rounded-full bg-red-200 text-red-600 font-medium md:text-lg px-4 py-2 w-fit mb-4"><ShieldAlert className="size-5 md:size-6"/>Confidentatial! Limited infos.</span>}
                             <p className="text-base md:text-lg text-gray-400 leading-relaxed">
                                 {project.description}
                             </p>
