@@ -12,7 +12,7 @@ const projectsDetails = [
         title: 'Application de suivi des projets et tâches',
         description: "Application de gestion des projets et tâches permettant de suivre la progression, gérer les priorités et communiquer en temps réel avec les coéquipiers. Le backend a été conçu avec une architecture en couches afin de garantir un code clair, maintenable et facilement extensible. ",
         technologies: ['React','Typescript', 'Node.js', 'Express', 'TailwindCSS', 'Prisma', 'PostgreSQL', 'Redis', 'WebSocket'],
-        skills: ['Temps réel avec WebSocket', 'Zustand', 'Authentification avec JWT', 'Déploiement sur Render'],
+        skills: ['Temps réel avec WebSocket', 'Zustand', 'Authentification avec JWT', 'Redis', 'Resend (Email)'],
         liveUrl: 'https://example.com',
         githubUrl: 'https://github.com/katangalac/projectManager',
         images: [
