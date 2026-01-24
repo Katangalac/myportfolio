@@ -135,7 +135,7 @@ function HeroContent() {
                     acquise via des projets concrets et des stages professionnels.
                 </p>
                 <div className="flex gap-4 mt-8">
-                    <a href="#contact" className="px-6 py-3 font-medium bg-gradient-to-b from-slate-300 via-cyan-600 to-cyan-900 text-white rounded-lg hover:to-cyan-500 transition">
+                    <a href="#contact" className="px-3 py-1.5 text-sm md:text-base md:px-6 md:py-3 font-medium bg-gradient-to-b from-slate-300 via-cyan-600 to-cyan-900 text-white rounded-lg hover:to-cyan-500 transition">
                         Me contacter
                     </a>
                 </div>

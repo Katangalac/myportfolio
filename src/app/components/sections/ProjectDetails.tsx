@@ -24,7 +24,7 @@ const projectsDetails = [
             {src:'/projectFlow/scheduler.webp', alt:'scheduler'},
         ],
         confidential:false,
-        deploy:true,
+        deploy:false,
         code:true,
     },
     {
