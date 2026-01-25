@@ -168,14 +168,14 @@ export default function ProjectsOverview() {
                     {/* Boutons de navigation */}
                     <button
                         onClick={() => paginate(-1)}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 text-gray-700 w-12 h-12 rounded-full  bg-white/10 shadow-lg hover:shadow-xl hover:bg-white/60 transition flex items-center justify-center group z-10"
+                        className="absolute left-8 top-1/2 -translate-y-1/2 -translate-x-1/2  text-gray-400 md:text-gray-700 w-12 h-12 rounded-full  bg-white/10 shadow-lg hover:shadow-xl hover:bg-white/60 hover:text-gray-700 transition flex items-center justify-center group z-10"
                         aria-label="Projet précédent"
                     >
                         <ChevronLeft className="group-hover:-translate-x-1 transition-transform" />
                     </button>
                     <button
                         onClick={() => paginate(1)}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 text-gray-700 w-12 h-12 rounded-full  bg-white/10 shadow-lg hover:shadow-xl hover:bg-white/60 transition flex items-center justify-center group z-10"
+                        className="absolute right-8 top-1/2 -translate-y-1/2 translate-x-1/2 text-gray-400 w-12 h-12 rounded-full  bg-white/10 shadow-lg hover:shadow-xl hover:bg-white/60 hover:text-gray-700 transition flex items-center justify-center group z-10"
                         aria-label="Projet suivant"
                     >
                         <ChevronRight className="group-hover:translate-x-1 transition-transform" />

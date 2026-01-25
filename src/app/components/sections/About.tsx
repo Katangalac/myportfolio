@@ -129,7 +129,7 @@ function HeroContent() {
             </div>
             <div className="flex-1">
                 <h1 className="text-2xl md:text-5xl text-white font-bold mb-4">Christian Kayembe Katangala</h1>
-                <p className="text-lg md:text-2xl text-gray-300 mb-6">Développeur Backend & Frontend (Full-Stack Junior)</p>
+                <p className="text-lg md:text-2xl text-gray-300 mb-6">Développeur Full-Stack Junior</p>
                 <p className="text-base text-gray-400 md:text-lg leading-relaxed">
                     Motivé par le développement d’applications web, performantes et maintenables, avec une solide pratique
                     acquise via des projets concrets et des stages professionnels.
