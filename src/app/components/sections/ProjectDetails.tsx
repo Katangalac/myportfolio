@@ -20,7 +20,7 @@ const projectsDetails = [
             {src:'/projectFlow/project-detail.webp', alt:'project-detail'},
             {src:'/projectFlow/task-kanban.webp', alt:'task-kanban'},
             {src:'/projectFlow/task-detail.webp', alt:'task-detail'},
-            {src:'/projectFlow/conv.webp', alt:'conversation'},
+            {src:'/projectFlow/conv.webp', alt:'conversations'},
             {src:'/projectFlow/scheduler.webp', alt:'scheduler'},
         ],
         confidential:false,
