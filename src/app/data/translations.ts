@@ -15,7 +15,7 @@ export const translations = {
     // Hero Section
     hero: {
       name: "Christian Kayembe Katangala",
-      title: "Développeur Full-Stack Junior",
+      title: "Développeur Full-Stack",
       subtitle:
         "Motivé par le développement d’applications web, performantes et maintenables, avec une solide pratique" +
         " " +
@@ -494,7 +494,7 @@ export const translations = {
     // Hero Section
     hero: {
       name: "Christian Kayembe Katangala",
-      title: "Junior Full-Stack Developer",
+      title: "Full-Stack Developer",
       subtitle:
         "Driven to build performant and maintainable web applications, with strong practical experience gained through real-world projects and professional internships.",
       cta: "View my projects",
