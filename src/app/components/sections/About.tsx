@@ -157,7 +157,7 @@ function DescriptionContent(props: { t: TranslationKeys }) {
       <h2 className="text-2xl md:text-4xl text-white font-bold mb-8">
         {props.t.about.me.title}
       </h2>
-      <div className="space-y-6 text-base md:text-lg text-justify text-gray-400 leading-relaxed">
+      <div className="space-y-6 text-base md:text-lg max-w-prose  text-left text-gray-400 leading-relaxed">
         <p>{props.t.about.me.description.p1}</p>
         <p>{props.t.about.me.description.p2}</p>
         <p>{props.t.about.me.description.p3}</p>

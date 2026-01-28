@@ -81,7 +81,7 @@ export const translations = {
 
           p2:
             " Ce qui me motive avant tout, c’est la conception d’architectures applicatives fiables, scalables, " +
-            "maintenables et résilientes, en m’efforçant de respecter au mieux les bonnes pratiques du développement logiciel." +
+            "maintenables et résilientes, en m’efforçant de respecter au mieux les bonnes pratiques du développement logiciel. " +
             "L’optimisation des performances fait également partie de mes préoccupations, sans jamais compromettre " +
             "la clarté et la qualité du code.",
 
