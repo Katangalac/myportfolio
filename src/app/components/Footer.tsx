@@ -22,7 +22,7 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/christian-katangala-45311a391",
+      href: "https://www.linkedin.com/in/christian-kayembe-katangala-45311a391/",
       icon: Linkedin,
       color: "hover:text-sky-500",
     },

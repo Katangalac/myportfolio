@@ -266,22 +266,16 @@ function ExperienceContent(props: { t: TranslationKeys }) {
                 {exp.period}
               </span>
             </div>
-            <div className="mb-3 flex gap-1">
-              <label className="text-sm md:text-base text-white font-semibold">
-                {props.t.about.experience.sections.project} :
-              </label>
+            <div className="mb-3 flex justify-start gap-1">
               <p className="text-sm md:text-base text-gray-300 font-medium">
-                {exp.projectName}
+                <span className="text-sm md:text-base text-white font-semibold">{props.t.about.experience.sections.project} :</span> {exp.projectName}
               </p>
             </div>
-            <p className="text-sm md:text-base text-gray-400 mb-4 text-justify">
+            <p className="text-sm md:text-base text-gray-400 mb-4 text-left">
               {exp.description}
             </p>
-            <div className="mb-3 flex items-center gap-1">
-              <label className="text-white text-sm md:text-base font-semibold">
-                {props.t.about.experience.sections.tools} :
-              </label>
-              <p className="text-sm md:text-base text-gray-300">{exp.tech}</p>
+            <div className="mb-3 flex items-start gap-1 justify-start">
+              <p className="text-sm md:text-base text-gray-300"><span className="text-sm md:text-base text-white font-semibold">{props.t.about.experience.sections.tools} :</span> {exp.tech}</p>
             </div>
             <div className="border-l-4 border-cyan-500 pl-4">
               <h4 className="text-sm md:text-base text-white font-semibold mb-2">
